@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <h2>Student Admission Form</h2>
+        <fieldset>
+            <legend> Personal Details </legend>
+            <label>Full Name</label>
+            <input type="text" required autofocus placeholder="Enter full Name">
+
+            <label> Email</label>
+            <input type="email" required placeholder="Enter email">
+             
+            <label>Password</label>
+            <input type="password" required min="6" placeholder="enter password">
+
+            <label>Mobile Number</label>
+            <input type="tel" required max="10" pattern="[0-9]{10}" placeholder="enter mobile number">
+
+            <label>Date of Birth</label>
+            <input type="date" required placeholder="enter your date of birth">
+
+            <label>Age</label>
+            <input type="number" min="17" max="60" required placeholder="enter your age">
+        </fieldset>
+        <fieldset>
+            <legend> Academic Details</legend>
+            <label>Course</label>
+            <select required>
+                <option>B.tech</option>
+                <option>BCA</option>
+                <option>MBA</option>
+                <option>Arts and Science</option>
+            </select>
+            <label>Branch</label>
+            <input type="text" list="Branches">
+             <datalist id="Branches">
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>AIDS</option>
+            </datalist>
+            <label>Percentage</label>
+            <input type="range" min="35" max="100">
+        </fieldset>
+        <fieldset>
+            <legend>preferences</legend>
+            <label>Gender</label>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female
+            
+            <br>
+            <label>Languages Known</label>
+            <input type="checkbox">Telugu
+            <input type="checkbox">Hindi
+            <input type="checkbox">English
+
+            <br>
+            <label>Submit Documents</label>
+            <input type="file">
+
+            <label>Feedback</label>
+            <textarea rows="5"></textarea>
+            </fieldset>
+            <button>Submit</button>
+            <button>Cancel</button>
+    </form> 
+</body>
+</html>

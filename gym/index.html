@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GymPro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:white;
+line-height:1.6;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:black;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+}
+
+.logo span{
+color:#ff4d4d;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#ff4d4d;
+}
+
+.btn{
+background:#ff4d4d;
+padding:10px 20px;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+text-decoration:none;
+}
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url("https://images.unsplash.com/photo-1558611848-73f7eb4001ab");
+background-size:cover;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#ff4d4d;
+}
+
+.programs,
+.pricing,
+.gallery,
+.trainers,
+.videos,
+.tools,
+.contact{
+padding:80px 10%;
+text-align:center;
+}
+
+h2{
+margin-bottom:40px;
+font-size:32px;
+}
+
+.card-container{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:25px;
+}
+
+.card{
+background:#1c1c1c;
+padding:25px;
+border-radius:10px;
+}
+
+.price-card{
+background:#1c1c1c;
+padding:25px;
+border-radius:10px;
+}
+
+.featured{
+border:2px solid #ff4d4d;
+}
+
+.price{
+font-size:22px;
+margin:10px 0;
+color:#ff4d4d;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.trainer-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:25px;
+}
+
+.trainer-card{
+background:#1c1c1c;
+padding:20px;
+border-radius:10px;
+}
+
+.trainer-card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.video-grid iframe{
+width:100%;
+height:200px;
+}
+
+.tools-grid{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.tool{
+background:#1c1c1c;
+padding:20px;
+border-radius:10px;
+width:250px;
+}
+
+.tool input{
+width:100%;
+padding:10px;
+margin:5px 0;
+}
+
+.contact form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.contact input,
+.contact textarea{
+padding:10px;
+border:none;
+border-radius:5px;
+}
+
+#successMsg{
+display:none;
+color:lightgreen;
+margin-top:10px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+}
+/* SUPPLEMENTS & ACCESSORIES */
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.product-card{
+background:#1c1c1c;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.product-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.product-price{
+color:#ff4d4d;
+font-size:18px;
+margin:10px 0;
+}
+
+.search-bar{
+width:300px;
+padding:10px;
+margin-bottom:30px;
+border:none;
+border-radius:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+
+<div class="logo">GYM<span>KHANA</span></div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#trainers">Trainers</a></li>
+<li><a href="#videos">Videos</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#supplements">Supplements</a></li>
+<li><a href="#accessories">Accessories</a></li>
+</ul>
+
+</nav>
+</header>
+
+<section id="home" class="hero">
+<div class="hero-content">
+<h1>NO PAIN <span>NO GAIN</span></h1>
+<p>Push yourself because no one else is going to do it for you.</p>
+<a href="#pricing" class="btn">Get Started</a>
+</div>
+</section>
+
+<section id="programs" class="programs">
+
+<h2>Our Programs</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Weight Training</h3>
+<p>Build strength and muscle with expert guidance.</p>
+</div>
+
+<div class="card">
+<h3>Cardio Training</h3>
+<p>Improve stamina and burn calories effectively.</p>
+</div>
+
+<div class="card">
+<h3>Yoga</h3>
+<p>Enhance flexibility and mental peace.</p>
+</div>
+
+<div class="card">
+<h3>CrossFit</h3>
+<p>High intensity functional fitness workouts.</p>
+</div>
+
+<div class="card">
+<h3>Bodybuilding</h3>
+<p>Professional muscle building training.</p>
+</div>
+
+</div>
+</section>
+
+<section id="pricing" class="pricing">
+
+<h2>Pricing Plans</h2>
+
+<div class="card-container">
+
+<div class="price-card">
+<h3>Basic</h3>
+<p class="price">₹999/month</p>
+<p>Gym equipment access</p>
+<a href="#" onclick="choosePlan('Basic')" class="btn">Choose Plan</a>
+</div>
+
+<div class="price-card">
+<h3>Starter</h3>
+<p class="price">₹1499/month</p>
+<p>Gym + Cardio Area</p>
+<a href="#" onclick="choosePlan('Starter')" class="btn">Choose Plan</a>
+</div>
+
+<div class="price-card featured">
+<h3>Standard</h3>
+<p class="price">₹1999/month</p>
+<p>Gym + Personal Trainer</p>
+<a href="#" onclick="choosePlan('Standard')" class="btn">Choose Plan</a>
+</div>
+
+<div class="price-card">
+<h3>Advanced</h3>
+<p class="price">₹2499/month</p>
+<p>Gym + Trainer + Diet Plan</p>
+<a href="#" onclick="choosePlan('Advanced')" class="btn">Choose Plan</a>
+</div>
+
+<div class="price-card">
+<h3>Premium</h3>
+<p class="price">₹2999/month</p>
+<p>All services included</p>
+<a href="#" onclick="choosePlan('Premium')" class="btn">Choose Plan</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery" class="gallery">
+
+<h2>Gym Gallery</h2>
+
+<div class="gallery-grid">
+
+<img src="back.avif">
+<img src="eqp.avif">
+<img src="gym.avif">
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48">
+
+<img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c">
+<img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e">
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+<img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61">
+
+</div>
+
+</section>
+
+<section id="trainers" class="trainers">
+
+<h2>Our Trainers</h2>
+
+<div class="trainer-grid">
+
+<div class="trainer-card">
+<img src="WhatsApp Image 2026-03-12 at 10.07.04 AM (1).jpeg">
+<h3>SRIKANTH</h3>
+<p>Strength Coach</p>
+</div>
+
+<div class="trainer-card">
+<img src="WhatsApp Image 2026-03-12 at 10.07.04 AM.jpeg">
+<h3>VENKAT PATEL</h3>
+<p>Trainer</p>
+</div>
+
+<div class="trainer-card">
+<img src="WhatsApp Image 2026-03-12 at 10.07.05 AM.jpeg">
+<h3>DEVVV</h3>
+<p>Specialist</p>
+</div>
+
+<div class="trainer-card">
+<img src="ronnie.jpg">
+<h3>RONNIE COLEMAN</h3>
+<p>Bodybuilding Coach</p>
+</div>
+
+<div class="trainer-card">
+<img src="arnold.jpg">
+<h3>ARNOLD</h3>
+<p>Fitness Expert</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="videos" class="videos">
+
+<h2>Workout Videos</h2>
+
+<div class="video-grid">
+
+<iframe src="https://www.youtube.com/embed/BMUOdSHumMY"></iframe>
+<iframe src="https://www.youtube.com/embed/5Ici1mxdX_4"></iframe>
+<iframe src="https://www.youtube.com/embed/eAlNvWgTDZQ"></iframe>
+
+</div>
+
+</section>
+<section id="supplements" class="programs">
+
+<h2>Supplements</h2>
+
+<input type="text" id="searchBar" class="search-bar"
+placeholder="Search supplements or brands..."
+onkeyup="searchProducts()">
+
+<div class="product-grid" id="productList">
+
+<div class="product-card">
+<img src="mb.jpg">
+<h3>MuscleBlaze Whey Protein</h3>
+<p>Brand: MuscleBlaze</p>
+<p class="product-price">₹2499</p>
+</div>
+
+<div class="product-card">
+<img src="avat.jpg">
+<h3>Avvatar Whey Protein</h3>
+<p>Brand: Avvatar</p>
+<p class="product-price">₹2799</p>
+</div>
+
+<div class="product-card">
+<img src="cre mb.jpg">
+<h3>MuscleBlaze Creatine</h3>
+<p>Brand: MuscleBlaze</p>
+<p class="product-price">₹799</p>
+</div>
+
+<div class="product-card">
+<img src="pre.jpg">
+<h3>Pre Workout 300</h3>
+<p>Brand: MuscleBlaze</p>
+<p class="product-price">₹1499</p>
+</div>
+
+<div class="product-card">
+<img src="ava cre.jpg">
+<h3>Avvatar Creatine</h3>
+<p>Brand: Avvatar</p>
+<p class="product-price">₹899</p>
+</div>
+
+</div>
+
+</section>
+<section id="accessories" class="programs">
+
+<h2>Gym Accessories</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="shaker.jpg">
+<h3>Gym Shaker Bottle</h3>
+<p class="product-price">₹299</p>
+</div>
+
+<div class="product-card">
+<img src="bag.jpg">
+<h3>Gym Backpack</h3>
+<p class="product-price">₹1299</p>
+</div>
+
+<div class="product-card">
+<img src="straps.jpg">
+<h3>Lifting Straps</h3>
+<p class="product-price">₹399</p>
+</div>
+
+<div class="product-card">
+<img src="wrist.jpg">
+<h3>Wrist Support</h3>
+<p class="product-price">₹499</p>
+</div>
+
+</div>
+
+</section>
+<section id="tools" class="tools">
+
+<h2>Fitness Tools</h2>
+
+<div class="tools-grid">
+
+<div class="tool">
+
+<h3>BMI Calculator</h3>
+
+<input id="height" placeholder="Height (cm)">
+<input id="weight" placeholder="Weight (kg)">
+
+<button onclick="calculateBMI()" class="btn">Calculate</button>
+
+<p id="bmiResult"></p>
+
+</div>
+
+<div class="tool">
+
+<h3>Calories Burned</h3>
+
+<input id="minutes" placeholder="Workout Minutes">
+
+<button onclick="calories()" class="btn">Calculate</button>
+
+<p id="calorieResult"></p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<form id="contactForm">
+
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message"></textarea>
+
+<button class="btn">Send Message</button>
+
+</form>
+
+<p id="successMsg">Message Sent Successfully!</p>
+
+</section>
+
+<footer>
+<p>© 2026 Gym Pro | All Rights Reserved</p>
+</footer>
+
+<script>
+
+function calculateBMI(){
+
+let h=document.getElementById("height").value/100;
+let w=document.getElementById("weight").value;
+
+let bmi=w/(h*h);
+
+let category="";
+
+if(bmi<18.5){category="Underweight";}
+else if(bmi<24.9){category="Normal Weight";}
+else if(bmi<29.9){category="Overweight";}
+else{category="Obese";}
+
+document.getElementById("bmiResult").innerHTML="Your BMI : "+bmi.toFixed(2)+" ("+category+")";
+
+}
+
+function calories(){
+
+let m=document.getElementById("minutes").value;
+
+let c=m*8;
+
+document.getElementById("calorieResult").innerHTML="Calories Burned : "+c;
+
+}
+
+const form=document.getElementById("contactForm");
+const msg=document.getElementById("successMsg");
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+msg.style.display="block";
+form.reset();
+
+});
+
+function choosePlan(plan){
+
+localStorage.setItem("selectedPlan",plan);
+
+let user=localStorage.getItem("loggedUser");
+
+if(!user){
+
+alert("Please login first");
+
+window.location="login.html";
+
+}else{
+
+window.location="payment.html";
+
+}
+
+}
+function searchProducts(){
+
+let input=document.getElementById("searchBar").value.toLowerCase();
+
+let products=document.querySelectorAll("#productList .product-card");
+
+products.forEach(function(product){
+
+let text=product.innerText.toLowerCase();
+
+if(text.includes(input)){
+product.style.display="block";
+}else{
+product.style.display="none";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

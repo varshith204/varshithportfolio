@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GymPro Membership Payment</title>
+<link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+<h2>Membership Payment</h2>
+
+<form id="paymentForm">
+
+<select required>
+
+<option>Select Plan</option>
+<option>Basic - ₹999</option>
+<option>Standard - ₹1999</option>
+<option>Premium - ₹2999</option>
+
+</select>
+
+<input type="text" placeholder="Card Holder Name" required>
+
+<input type="text" placeholder="Card Number" required>
+
+<input type="text" placeholder="Expiry Date" required>
+
+<input type="text" placeholder="CVV" required>
+
+<select>
+
+<option>Payment Method</option>
+<option>Credit Card</option>
+<option>Debit Card</option>
+<option>UPI</option>
+<option>Net Banking</option>
+
+</select>
+
+<button type="submit">Pay Now</button>
+
+</form>
+
+<p id="payMsg"></p>
+
+</div>
+
+<script>
+
+document.getElementById("paymentForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+document.getElementById("payMsg").innerHTML="Payment Successful! Welcome to GymPro.";
+
+});
+
+</script>
+
+</body>
+</html>

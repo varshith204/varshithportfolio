@@ -1,0 +1,57 @@
+body{
+font-family:Poppins;
+background:#0f0f0f;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+}
+
+.auth-container{
+
+background:#1c1c1c;
+padding:40px;
+border-radius:10px;
+width:320px;
+text-align:center;
+
+}
+
+.auth-container h2{
+margin-bottom:20px;
+}
+
+.auth-container input,
+.auth-container select{
+
+width:100%;
+padding:10px;
+margin:8px 0;
+border:none;
+border-radius:5px;
+
+}
+
+.auth-container button{
+
+width:100%;
+padding:10px;
+background:#ff4d4d;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+
+}
+
+.auth-container a{
+color:#ff4d4d;
+}
+
+#loginMsg,
+#signupMsg,
+#payMsg{
+margin-top:10px;
+color:lightgreen;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:linear-gradient(to top,yellow,orange);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            text-align: center;
+            font-weight: bold;
+        }
+        h1{
+            color: green;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            font-size: 50px;
+        }
+        label{
+            font-size: 90px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+
+        }
+         .btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 10px;
+            gap: 20px;
+         }
+         button{
+            height: 35px;
+            width: 90px;
+            border-radius: 10px;
+            background-color: skyblue;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3 ease;
+         }
+         button:hover
+        {
+            transform: translate(-4px,-4px);
+            background-color: hsl(208, 73%, 39%);
+            box-shadow: 3px 3px 5px rgb(95, 94, 92);
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+    <label id="number">0</label>
+    <div class="btn">
+    <button id="raise">raise</button>
+    <button id="clear">clear</button>
+    <button id="down">down</button>
+    </div>
+    <p id="message"></p>
+    <script>
+        const labelValue = document.getElementById("number");
+        const raiseBtn=document.getElementById("raise");
+        const clearBtn=document.getElementById("clear");
+        const downBtn=document.getElementById("down");
+        const result=document.getElementById("message");
+        let count=0;
+        raiseBtn.onclick=function(){
+         count++;
+         labelValue.textContent=(count);
+         result.textContent=("Counter Incrementation");
+         result.style.color=("green"); 
+         result.style.fontWeight=("bold");
+         result.style.fontSize=("50px")  
+        }
+        clearBtn.onclick=function(){
+          count=0;
+          labelValue.textContent=(count);
+          result.textContent=("Counter Reset");
+
+        }  
+        downBtn.onclick=function(){
+            count--;
+            labelValue.textContent=(count);
+            result.textContent=("Counter Decrementation");
+             result.style.color=("red"); 
+        }
+    </script>
+</body>
+</html>

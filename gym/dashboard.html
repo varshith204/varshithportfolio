@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GymPro Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="dash-header">
+<h2>GymPro Member Dashboard</h2>
+<button onclick="logout()">Logout</button>
+</header>
+
+<section class="dashboard">
+
+<div class="card">
+
+<h3>Membership Status</h3>
+
+<p id="plan">Premium Plan</p>
+
+<p>Valid Till: 31 Dec 2026</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Payment Status</h3>
+
+<p>Last Payment: ₹2999</p>
+
+<p>Status: Successful</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Track Weight</h3>
+
+<input id="weightInput" placeholder="Enter weight (kg)">
+
+<button onclick="addWeight()">Add</button>
+
+<ul id="weightList"></ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>BMI Calculator</h3>
+
+<input id="height" placeholder="Height cm">
+
+<input id="weight" placeholder="Weight kg">
+
+<button onclick="calculateBMI()">Calculate</button>
+
+<p id="bmiResult"></p>
+
+</div>
+
+</section>
+
+
+<script>
+
+function logout(){
+window.location.href="login.html";
+}
+
+function addWeight(){
+
+let weight=document.getElementById("weightInput").value;
+
+let li=document.createElement("li");
+
+li.innerText=weight+" kg";
+
+document.getElementById("weightList").appendChild(li);
+
+document.getElementById("weightInput").value="";
+
+}
+
+function calculateBMI(){
+
+let h=document.getElementById("height").value/100;
+
+let w=document.getElementById("weight").value;
+
+let bmi=w/(h*h);
+
+document.getElementById("bmiResult").innerHTML="BMI: "+bmi.toFixed(2);
+
+}
+
+</script>
+
+</body>
+</html>
