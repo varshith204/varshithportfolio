@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Varshith | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #eef2f7;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 25%;
+            background: #1e272e;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        .profile {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #4bcffa;
+            object-fit: cover;
+        }
+
+        .sidebar h2 {
+            margin-top: 10px;
+        }
+
+        .role {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #4bcffa;
+            color: black;
+        }
+
+        .main {
+            margin-left: 25%;
+            padding: 30px;
+            width: 75%;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h1 {
+            margin-bottom: 10px;
+            color: #1e272e;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .box {
+            background: #4bcffa;
+            padding: 12px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .box a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .box:hover {
+            background: #1e272e;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #4bcffa;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        .global-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .global-btn {
+            display: block;
+            padding: 15px;
+            text-align: center;
+            background: #4bcffa;
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .global-btn:hover {
+            background: #1e272e;
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #4bcffa;
+            color: black;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1e272e;
+            color: white;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: gray;
+        }
+
+        @media(max-width: 768px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .main {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .global-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <img src="proffesional [pic.jpeg" class="profile">
+
+        <h2>Billakanti Varshith</h2>
+        <p class="role">B.Tech CSE Student</p>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#extra">Interpersonal Skills</a>
+            <a href="#global">Global Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <div class="main">
+
+        <section id="about">
+            <h1>About Me</h1>
+            <p>
+                I am a first-year B.Tech Computer Science student at KLH University.
+                I am passionate about web development and programming.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h1>Technical Skills</h1>
+            <div class="grid">
+                <div class="box"><a href="portfolio/htmlcsscodes.html">HTML and CSS</a></div>
+                <div class="box"><a href="portfolio/javascript.html">Java Script</a></div>
+                <div class="box"><a href="#">Java</a></div>
+                <div class="box"><a href="#">DSA</a></div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h1>Projects</h1>
+
+            <div class="card">
+                <h3>Fitness Website</h3>
+                <p>Designed using HTML and CSS.</p>
+                <a href="gym/index.html" class="btn" target="_blank">Visit Website</a>
+            </div>
+            <div class="card">
+                <h3>Design Thinking Innovation Expo</h3>
+                <p>Participated in the DTI Expo conducted on our campus.</p>
+                <a href="portfolio/Participation Certificate-DTI- 2510030197.pdf" class="btn" target="_blank">View Certificate</a>
+            </div>
+        </section>
+
+        <section id="global">
+            <h1>Global Certifications</h1>
+
+            <div class="card">
+                <div class="global-grid">
+                    <a href="https://www.codechef.com/users/varsh_321" class="global-btn" target="_blank">CodeChef</a>
+                    <a href="https://www.hackerrank.com/profile/varshith197" class="global-btn" target="_blank">HackerRank</a>
+                    <a href="https://github.com/" class="global-btn" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/varshith-billakanti-977455374/" class="global-btn" target="_blank">LinkedIn</a>
+                    <a href="https://www.freecodecamp.org/learn/responsive-web-design-v9/" class="global-btn" target="_blank">FreeCodeCamp</a>
+                     <a href="https://codolio.com/profile/varshith197" class="global-btn" target="_blank">Codolio</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h1>Education</h1>
+
+            <div class="card">
+                <p><b>B.Tech Computer Science</b></p>
+                <p>KLH University | 2025 – 2029</p>
+                 <a href="https://newerp.kluniversity.in/index.php?r=studentinfo%2Fstudentendexamresult%2Fsearchgetmycgpa" class="btn" target="_blank">View 1st sem CGPA</a>
+            </div>
+
+            <div class="card">
+                <p><b>Intermediate (MPC)</b></p>
+                <p>Your Junior College Name | 2023 – 2025</p>
+                <a href="/portfolio/__ Second Year Memo Download __.pdf" class="btn" target="_blank">View Certificate</a>
+            </div>
+
+            <div class="card">
+                <p><b>Schooling (SSC)</b></p>
+                <p>Your School Name | Completed in 2023</p>
+                <a href="CLASSXCERTIFICATE.pdf" class="btn" target="_blank">View Certificate</a>
+            </div>
+        </section>
+
+        <section id="extra">
+            <h1>Interpersonal Skills</h1>
+            <ul>
+                <li>Teamwork & Collaboration</li>
+                <li>Problem-Solving</li>
+                <li>Communication Skills</li>
+                <li>Adaptability</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+
+            <p><b>Email:</b> 
+                <a href="mailto:varshithbillakanti94@gmail.com">
+                    varshithbillakanti94@gmail.com
+                </a>
+            </p>
+
+            <p><b>Mobile:</b> 
+                <a href="tel:+917730003250">
+                    +917730003250
+                </a>
+            </p>
+
+            <p><b>Address:</b>  
+                Hanumannagar, Meerpet, Hyderabad
+            </p>
+
+        </section>
+
+        <footer>
+            © 2026 Billakanti Varshith | Portfolio
+        </footer>
+
+    </div>
+
+</div>
+
+</body>
+</html>
