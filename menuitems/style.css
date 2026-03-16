@@ -1,0 +1,25 @@
+.body-background{
+    background-image: url("photo_2026-01-20_09-27-14.jpg");
+    background-size: cover;
+}
+.menu-grid{
+    display:grid;
+    grid-template-columns:50% 50%;
+    gap: 25px;
+    padding:40px;
+    margin:auto;
+    max-width:900px;
+}
+.mc{
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    background-color:lightblue;
+    max-width:500px;
+}
+.image{
+    height:180px;
+    width: 180px;
+    padding:20px;
+    border-radius: 25px;
+}

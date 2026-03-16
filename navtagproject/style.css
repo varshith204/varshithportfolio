@@ -1,0 +1,19 @@
+p,li{
+    font-size: 25px;
+}
+h2{
+    font-size: 32px;
+}
+body{
+    background-color: blueviolet;
+    font-family: Roboto;
+    color: beige;
+}
+nav{
+    background-color: aquamarine;
+    width: fit-content;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}

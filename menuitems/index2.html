@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABC Restaurant Menu</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url("photo_2026-01-20_09-27-14.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Dark overlay for readability */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            padding-top: 25px;
+            letter-spacing: 2px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            padding: 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .mc {
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mc:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+        }
+
+        .image {
+            height: 160px;
+            width: 160px;
+            object-fit: cover;
+            border-radius: 18px 0 0 18px;
+        }
+
+        .item-details {
+            padding: 18px;
+        }
+
+        .item-details h4 {
+            margin: 0;
+            font-size: 20px;
+            color: #222;
+        }
+
+        .item-details p {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #e63946;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ABC RESTAURANT</h1>
+
+    <div class="menu-grid">
+->
+        
+        <div class="mc">
+            <img class="image" src="https://www.eatthelove.com/wp-content/uploads/2014/02/chocolate-waffles.jpg">
+            <div class="item-details">
+                <h4>Waffle</h4>
+                <p>Chocolate and vanilla swirl waffles served with fresh strawberries and cream.</p>
+                <p class="price">$5</p>
+            </div>
+        </div>
+
+        <div class="mc">
+            <img class="image" src="https://www.eatthelove.com/wp-content/uploads/2014/02/chocolate-waffles.jpg">
+            <div class="item-details">
+                <h4>Chocolate Waffle</h4>
+                <p>Rich chocolate waffle topped with syrup and whipped cream.</p>
+                <p class="price">$6</p>
+            </div>
+        </div>
+
+        <div class="mc">
+            <img class="image" src="https://www.eatthelove.com/wp-content/uploads/2014/02/chocolate-waffles.jpg">
+            <div class="item-details">
+                <h4>Strawberry Waffle</h4>
+                <p>Fresh strawberry waffle with honey drizzle.</p>
+                <p class="price">$6</p>
+            </div>
+        </div>
+
+        <div class="mc">
+            <img class="image" src="https://www.eatthelove.com/wp-content/uploads/2014/02/chocolate-waffles.jpg">
+            <div class="item-details">
+                <h4>Vanilla Waffle</h4>
+                <p>Classic vanilla waffle served with maple syrup.</p>
+                <p class="price">$5</p>
+            </div>
+        </div>
+
+        <div class="mc">
+            <img class="image" src="https://www.eatthelove.com/wp-content/uploads/2014/02/chocolate-waffles.jpg">
+            <div class="item-details">
+                <h4>Nutella Waffle</h4>
+                <p>Loaded with Nutella, chocolate chips and cream.</p>
+                <p class="price">$7</p>
+            </div>
+        </div>
+
+        <div class="mc">
+            <img class="image" src="https://www.eatthelove.com/wp-content/uploads/2014/02/chocolate-waffles.jpg">
+            <div class="item-details">
+                <h4>Banana Waffle</h4>
+                <p>Banana slices with caramel sauce and cream.</p>
+                <p class="price">$6</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

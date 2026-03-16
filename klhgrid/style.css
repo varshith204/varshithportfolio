@@ -1,0 +1,32 @@
+body{
+   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.heading{
+    text-align: center;
+ background: linear-gradient(135deg, #8094ef 0%, #ba8aeb 100%);
+ padding: 30px;
+ color:aliceblue;
+}
+.container{
+    text-align: center;
+ background: linear-gradient(135deg, #8094ef 0%, #ba8aeb 100%);
+ color: aliceblue;
+ max-width: 600px;
+ padding-bottom: 10px;
+ border-radius: 25px;
+}
+.card-button{
+padding:15px;
+border-radius: 25px;
+background: linear-gradient(135deg, #e99fb7 20%, #c2557f 100%);
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+    gap:20px;
+    padding: 40px;
+    max-width: 1200px;
+}
