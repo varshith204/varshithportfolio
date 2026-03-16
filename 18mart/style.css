@@ -1,0 +1,13 @@
+.body{
+ background-color: aquamarine;
+}
+.logo,.one,.two,.three{
+    background-color: red;
+    color: aliceblue;
+    text-align: center;
+    width:450px;
+    margin: 20px auto;
+    border-radius: 25px;
+    padding: 20px;
+
+}

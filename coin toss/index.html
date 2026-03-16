@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toss Game</title>
+    <style>
+        body{
+            background: linear-gradient(45deg,red, green, blue, yellow);
+            height: 100vh;
+            text-align: center;
+            color: white;
+        }
+        img{
+            background: transparent;
+            overflow: hidden;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+        button{
+            height: 35px;
+            width: 70px;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <h2>Simple Toss Game</h2>
+    <img src="rupee.jpeg" height="100px" width="100px">
+    <br>
+    <br>
+
+    <button id="headsBtn">Heads</button>
+    <button id="tailsBtn">Tails</button>
+    </body>
+    <h3 id="result"></h3>
+
+    <script>
+
+        const headsBtn = document.getElementById("headsBtn");
+        const tailsBtn = document.getElementById("tailsBtn");
+        const resultText = document.getElementById("result");
+
+        // Heads function
+        headsBtn.onclick = function () {
+
+            let toss = Math.random();
+            let result;
+
+            if (toss < 0.5) {
+                result = "Heads";
+            } else {
+                result = "Tails";
+            }
+
+            if (result === "Heads") {
+                resultText.textContent =
+                    "Toss Result: " + result + " - You Win!";
+            } else {
+                resultText.textContent =
+                    "Toss Result: " + result + " - You Lose!";
+            }
+        };
+
+        // Tails function
+        tailsBtn.onclick = function () {
+
+            let toss = Math.random();
+            let result;
+
+            if (toss < 0.5) {
+                result = "Heads";
+            } else {
+                result = "Tails";
+            }
+
+            if (result === "Tails") {
+                resultText.textContent =
+                    "Toss Result: " + result + " - You Win!";
+            } else {
+                resultText.textContent =
+                    "Toss Result: " + result + " - You Lose!";
+            }
+        };
+
+    </script>
+
+
+</body>
+</html>
